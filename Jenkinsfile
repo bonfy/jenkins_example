@@ -5,6 +5,10 @@ pipeline {
         NAME = 'BONFY'
     }
 
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    }
+
     stages {
         stage('Step 1') {
             steps {
@@ -15,9 +19,8 @@ pipeline {
 
         stage('Step 2') {
             steps {
-                NAME = 'Jane'
                 echo 'Hello Step 2'
-                echo 'Hello ${NAME}'
+                echo 'Hello ${params.PERSON}'
             }
         }
     }
