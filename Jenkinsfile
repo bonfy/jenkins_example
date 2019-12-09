@@ -13,14 +13,14 @@ pipeline {
         stage('Step 1') {
             steps {
                 echo 'Hello Step 1'
-                echo 'Hello ${NAME}'
+                echo "Hello ${NAME}"
             }
         }
 
         stage('Step 2') {
             steps {
                 echo 'Hello Step 2'
-                echo 'Hello ${params.PERSON}'
+                echo "Hello ${params.PERSON}"
             }
         }
     }
