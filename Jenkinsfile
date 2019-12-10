@@ -22,14 +22,17 @@ pipeline {
                 echo 'Hello Step 1'
                 echo "Hello ${NAME}"
 
-                env.OTHER = "BOB"
+                script
+				{
+                    env.NAME = "BOB"
+                }
             }
         }
 
         stage('Step 2') {
             steps {
                 echo 'Hello Step 2'
-                echo "Hello ${OTHER}"
+                echo "Hello ${NAME}"
                 echo "Hello ${params.PERSON}"
             }
         }
