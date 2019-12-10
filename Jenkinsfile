@@ -36,13 +36,17 @@ pipeline {
                 echo "Current folder: ${PWD}"
 
                 dir ("new_folder") {
-                    def cur_fd = pwd()
-                    echo "in dir current dir: ${cur_fd}"
+                    script {
+                        def cur_fd = pwd()
+                        echo "in dir current dir: ${cur_fd}"
+                    }
                 }
 
-                def fd = pwd()
-                echo "out dir current dir: ${fd}"
-
+                script {
+                    def fd = pwd()
+                    echo "out dir current dir: ${fd}"
+                }
+                
                 echo 'Hello Step 1'
 
                 // echo "Hello ${NAME}"
