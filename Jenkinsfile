@@ -37,7 +37,7 @@ pipeline {
 
                 script
                 {
-                    dir('new_folder') 
+                    dir('utils') 
                     {
                         def cur_fd = pwd()
                         echo "in dir current dir: ${cur_fd}"
