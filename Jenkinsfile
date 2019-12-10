@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+
+    // Defination
+    def PWD = pwd()
+
     options
 	{
 		skipDefaultCheckout()
@@ -11,8 +15,6 @@ pipeline {
     // environment {
     //     NAME = 'BONFY'
     // }
-
-    def PWD = pwd()
 
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
