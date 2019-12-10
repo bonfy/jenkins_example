@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+    options
+	{
+		skipDefaultCheckout()
+		buildDiscarder(logRotator(numToKeepStr: '20'))
+		timestamps()
+	}
+
     environment {
         NAME = 'BONFY'
     }
