@@ -1,3 +1,12 @@
+#!groovy
+
+// Libraries import
+
+
+// Global Defautls
+def project = "Hello"
+
+
 pipeline {
     agent any
 
@@ -22,6 +31,8 @@ pipeline {
     stages {
         stage('Step 1') {
             steps {
+
+                echo "Project Name: ${project}"
                 echo 'Hello Step 1'
 
                 // echo "Hello ${NAME}"
@@ -29,7 +40,8 @@ pipeline {
                 script
 				{
                     
-                    def PWD = pwd() 
+                    def PWD = pwd()
+
                     env.NAME = "BOB"
                     env.Title = "title"
                     
