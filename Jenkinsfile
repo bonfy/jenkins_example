@@ -5,7 +5,7 @@
 
 // Global Defautls
 def project = "Hello"
-def PWD = pwd()
+// def PWD = pwd()
 
 pipeline {
     agent any
@@ -33,7 +33,7 @@ pipeline {
             steps {
 
                 echo "Project Name: ${project}"
-                echo "Current folder: ${PWD}"
+                // echo "Current folder: ${PWD}"
 
                 // script
                 // {
@@ -47,8 +47,6 @@ pipeline {
                 //     println "out dir current dir: ${fd}"
                 // }
 
-                   
-        
 
                 echo 'Hello Step 1'
 
@@ -56,8 +54,6 @@ pipeline {
 
                 script
 				{
-                    
-
                     env.NAME = "BOB"
                     env.Title = "title"
                 }
