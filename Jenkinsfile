@@ -8,9 +8,9 @@ pipeline {
 		timestamps()
 	}
 
-    environment {
-        NAME = 'BONFY'
-    }
+    // environment {
+    //     NAME = 'BONFY'
+    // }
 
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
@@ -20,7 +20,7 @@ pipeline {
         stage('Step 1') {
             steps {
                 echo 'Hello Step 1'
-                echo "Hello ${NAME}"
+                // echo "Hello ${NAME}"
 
                 script
 				{
