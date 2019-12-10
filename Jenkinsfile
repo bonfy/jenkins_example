@@ -3,7 +3,6 @@ pipeline {
 
 
     // Defination
-    def PWD = pwd()
 
     options
 	{
@@ -25,15 +24,17 @@ pipeline {
             steps {
                 echo 'Hello Step 1'
 
-                echo "Current folder: ${PWD}"
                 // echo "Hello ${NAME}"
 
                 script
 				{
+                    
+                    def PWD = pwd() 
                     env.NAME = "BOB"
                     env.Title = "title"
                 }
 
+                echo "Current folder: ${PWD}"
                 echo "After set env: Hello ${NAME}"
                 echo "Title: ${Title}"
             }
