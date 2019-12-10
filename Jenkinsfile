@@ -25,7 +25,11 @@ pipeline {
                 script
 				{
                     env.NAME = "BOB"
+                    env.Title = "title"
                 }
+
+                echo "After set env: Hello ${NAME}"
+                echo "Title: ${Title}"
             }
         }
 
@@ -33,6 +37,7 @@ pipeline {
             steps {
                 echo 'Hello Step 2'
                 echo "Hello ${NAME}"
+                echo "Title: ${Title}"
                 echo "Hello ${params.PERSON}"
             }
         }
