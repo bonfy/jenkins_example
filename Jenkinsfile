@@ -32,9 +32,10 @@ pipeline {
                     def PWD = pwd() 
                     env.NAME = "BOB"
                     env.Title = "title"
+                    
+                    echo "Current folder: ${PWD}"
                 }
 
-                echo "Current folder: ${PWD}"
                 echo "After set env: Hello ${NAME}"
                 echo "Title: ${Title}"
             }
