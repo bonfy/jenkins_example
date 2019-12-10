@@ -6,8 +6,8 @@ pipeline {
 
     options
 	{
-		skipDefaultCheckout()
-		buildDiscarder(logRotator(numToKeepStr: '20'))
+		// skipDefaultCheckout()
+		// buildDiscarder(logRotator(numToKeepStr: '20'))
 		timestamps()
 	}
 
