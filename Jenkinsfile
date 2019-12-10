@@ -35,14 +35,16 @@ pipeline {
                 echo "Project Name: ${project}"
                 echo "Current folder: ${PWD}"
 
-                script {
-                    dir ("new_folder") {
+                script
+                {
+                    dir('new_folder') 
+                    {
                         def cur_fd = pwd()
                         echo "in dir current dir: ${cur_fd}"
                     }
-                    
+
                     def fd = pwd()
-                    echo "out dir current dir: ${fd}"
+                    println "out dir current dir: ${fd}"
                 }
 
                    
