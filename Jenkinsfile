@@ -12,6 +12,8 @@ pipeline {
     //     NAME = 'BONFY'
     // }
 
+    def PWD = pwd()
+
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
     }
@@ -20,6 +22,8 @@ pipeline {
         stage('Step 1') {
             steps {
                 echo 'Hello Step 1'
+
+                echo "Current folder: ${PWD}"
                 // echo "Hello ${NAME}"
 
                 script
