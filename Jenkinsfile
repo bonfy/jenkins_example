@@ -35,17 +35,17 @@ pipeline {
                 echo "Project Name: ${project}"
                 // echo "Current folder: ${PWD}"
 
-                // script
-                // {
-                //     dir('utils') 
-                //     {
-                //         def cur_fd = pwd()
-                //         echo "in dir current dir: ${cur_fd}"
-                //     }
+                script
+                {
+                    dir('utils') 
+                    {
+                        def cur_fd = pwd()
+                        echo "in dir current dir: ${cur_fd}"
+                    }
 
-                //     def fd = pwd()
-                //     println "out dir current dir: ${fd}"
-                // }
+                    def fd = pwd()
+                    println "out dir current dir: ${fd}"
+                }
 
 
                 echo 'Hello Step 1'
