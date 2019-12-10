@@ -41,6 +41,9 @@ pipeline {
                     {
                         def cur_fd = pwd()
                         echo "in dir current dir: ${cur_fd}"
+
+                        sh "mkdir -p output"
+                        writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
                     }
 
                     def fd = pwd()
