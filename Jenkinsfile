@@ -35,36 +35,9 @@ pipeline {
                 echo "This is a hotfix"
 
                 echo "Project Name: ${project}"
-                // echo "Current folder: ${PWD}"
 
-                // script
-                // {
-                //     dir('utils') 
-                //     {
-                //         def cur_fd = pwd()
-                //         echo "in dir current dir: ${cur_fd}"
-
-                //         sh "mkdir -p output"
-                //         writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
-                //     }
-
-                //     def fd = pwd()
-                //     println "out dir current dir: ${fd}"
-                // }
-
-
-                echo 'Hello Step 1'
-
-                // echo "Hello ${NAME}"
-
-                script
-				{
-                    env.NAME = "BOB"
-                    env.Title = "title"
-                }
-
-                echo "After set env: Hello ${NAME}"
-                echo "Title: ${Title}"
+                echo "JOB NAME ${env.JOB_NAME}"
+                echo "Branch NAME ${env.BRANCH_NAME}"
             }
         }
 
