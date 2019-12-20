@@ -32,6 +32,8 @@ pipeline {
         stage('Step 1') {
             steps {
 
+                echo "This is a hotfix"
+
                 echo "Project Name: ${project}"
                 // echo "Current folder: ${PWD}"
 
