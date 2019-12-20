@@ -37,7 +37,7 @@ pipeline {
                 echo "Project Name: ${project}"
 
                 echo "JOB NAME ${env.JOB_NAME}"
-                echo "Branch NAME ${env.BRANCH_NAME}"
+                // echo "Branch NAME ${env.BRANCH_NAME}"
             }
         }
 
