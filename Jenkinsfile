@@ -34,8 +34,8 @@ pipeline {
 
                 echo "Project Name: ${project}"
 
-                def PWD = pwd()
-                echo "Current folder: ${PWD}"
+                // def PWD = pwd()
+                // echo "Current folder: ${PWD}"
 
                 throw new Exception("Something went wrong!")
 
