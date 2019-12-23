@@ -33,11 +33,12 @@ pipeline {
             steps {
 
                 echo "Project Name: ${project}"
+                sh "ls -al"
 
                 // def PWD = pwd()
                 // echo "Current folder: ${PWD}"
 
-                throw new Exception("Something went wrong!")
+                // throw new Exception("Something went wrong!")
 
                 script
                 {
