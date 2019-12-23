@@ -5,7 +5,7 @@
 
 // Global Defautls
 def project = "Hello"
-// def PWD = pwd()
+
 
 pipeline {
     agent any
@@ -15,7 +15,7 @@ pipeline {
 
     options
 	{
-		skipDefaultCheckout()
+		// skipDefaultCheckout()
 		// buildDiscarder(logRotator(numToKeepStr: '20'))
 		timestamps()
 	}
@@ -33,7 +33,11 @@ pipeline {
             steps {
 
                 echo "Project Name: ${project}"
-                // echo "Current folder: ${PWD}"
+
+                def PWD = pwd()
+                echo "Current folder: ${PWD}"
+
+                throw new Exception("Something went wrong!")
 
                 script
                 {
